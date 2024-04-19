@@ -1,4 +1,4 @@
-import { GetFfernFriendResponse } from "@/services/response-types";
+import { GetFfernFriendResponse } from "@/services/types/get-ffern-friend-response-type";
 
 export const mockGetFfernFriendResponse: GetFfernFriendResponse = {
     id: "123456789",
@@ -10,7 +10,7 @@ export const mockGetFfernFriendResponse: GetFfernFriendResponse = {
     postcode: "98765",
     stateOrCounty: "Springfield County",
     country: "US",
-    subscribedAt: 1657894321, 
-    createdAt: 1657894321, 
-    updatedAt: 1667894321, 
+    subscribedAt: 1657894321,
+    createdAt: 1657894321,
+    updatedAt: 1667894321,
 }

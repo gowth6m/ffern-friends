@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CaretRight,
   IconProps,
@@ -5,6 +7,10 @@ import {
   LockKey,
   List,
   X,
+  InstagramLogo,
+  FacebookLogo,
+  TiktokLogo,
+  PinterestLogo,
 } from "phosphor-react";
 
 interface IconType {
@@ -17,6 +23,10 @@ const Icon: IconType = {
   LockKey,
   List,
   X,
+  InstagramLogo,
+  FacebookLogo,
+  TiktokLogo,
+  PinterestLogo,
 };
 
 export default Icon;

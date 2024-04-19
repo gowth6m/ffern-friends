@@ -1,4 +1,4 @@
-import { UpdateFfernFriendsErrorResponse, UpdateFfernFriendsSuccessResponse } from "@/services/response-types";
+import { UpdateFfernFriendsErrorResponse, UpdateFfernFriendsSuccessResponse } from "@/services/types/update-ffern-friends-request-type";
 
 export const mockUpdateFfernFriendsSuccessResponse: UpdateFfernFriendsSuccessResponse = {
     id: "987654321",

@@ -1,5 +1,6 @@
 import { AxiosInstance, AxiosResponse } from "axios"
-import { GetFfernFriendResponse, UpdateFfernFriendsErrorResponse, UpdateFfernFriendsRequest, UpdateFfernFriendsSuccessResponse } from "@/services/response-types";
+import { GetFfernFriendResponse } from "@/services/types/get-ffern-friend-response-type";
+import { UpdateFfernFriendsErrorResponse, UpdateFfernFriendsRequest, UpdateFfernFriendsSuccessResponse } from "@/services/types/update-ffern-friends-request-type";
 
 export default class FfernFriendsClient {
 

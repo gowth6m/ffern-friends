@@ -1,39 +1,30 @@
 "use client";
 
+import PageCard from "@/components/page/page-card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import ApiClient from "@/services/api-client";
-import { useQuery } from "react-query";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const testQuery = useQuery({
-    queryFn: async () => {
-      return await ApiClient.ffernFriends.getFriend({
-        ffernFriendId: "siobhan-1234",
-      });
-    },
-  });
+  const router = useRouter();
+
+  const handleGoToInvite = () => {
+    router.push("/invite/siobhan-1234");
+  };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="relative ">
-        <Input type="text" label={"First name"} />
+    <PageCard>
+      <main className="flex flex-col items-center justify-between gap-8">
+        <div className="text-center text-2xl">Welcome to Ffern friends</div>
 
-        {testQuery.isLoading && <div>Loading...</div>}
-        {testQuery.isError && <div>Error: {}</div>}
-        {testQuery.isSuccess && (
-          <div>
-            <pre>{JSON.stringify(testQuery.data, null, 2)}</pre>
-          </div>
-        )}
-      </div>
-      <Button
-        onClick={() => {
-          console.log("Button clicked");
-        }}
-      >
-        Test button
-      </Button>
-    </main>
+        <div className="text-center">
+          <p>
+            This is a test page to demonstrate the invite flow. Click the button
+            below to go to the invite page.
+          </p>
+        </div>
+
+        <Button onClick={handleGoToInvite}>Test invite</Button>
+      </main>
+    </PageCard>
   );
 }

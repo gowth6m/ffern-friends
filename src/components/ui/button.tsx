@@ -41,6 +41,7 @@ export interface ButtonProps
   leadingIcon?: React.ReactNode;
   trailingIcon?: React.ReactNode;
   loading?: boolean;
+  fullWidth?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -54,6 +55,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       trailingIcon = <Icon.CaretRight />,
       children,
       loading,
+      fullWidth,
       onClick,
       ...props
     },
@@ -73,7 +75,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(
+          buttonVariants({ variant, size, className }),
+          fullWidth && "w-full",
+        )}
         onClick={(e) => {
           if (loading) return;
           onClick?.(e);

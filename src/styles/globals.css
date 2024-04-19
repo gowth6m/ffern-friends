@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+
 @layer base {
   :root {
     --background: 48 45% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 80 5% 1%;
 
-    --card: 48 45% 98%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 31% 94%;
+    --card-foreground: 80 5% 1%;
+    --form-card: 33 33% 83%;
 
     --popover: 48 45% 98%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 80 5% 1%;
 
     --primary: 21 77% 66%;
     --primary-foreground: 210 40% 98%;
@@ -36,18 +39,18 @@
     --radius: 0.5rem;
     --input-background: 48 33% 97%;
     --disabled: 60 8% 85%;
-
-
+    --error: 0 84.2% 60.2%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 80 5% 1%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 80 5% 1%;
     --card-foreground: 210 40% 98%;
+    --form-card: 33 33% 83%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 80 5% 1%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
@@ -71,6 +74,7 @@
     --input-background: 48 33% 97%;
     --disabled: 60 8% 85%;
     --primary-active: 21 56% 45%;
+    --error: 0 84.2% 60.2%;
   }
 }
 
@@ -81,5 +85,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Athiti", sans-serif;
   }
 }

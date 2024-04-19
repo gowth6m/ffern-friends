@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        covik: ["Covik Sans", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -26,6 +29,7 @@ const config = {
         foreground: "hsl(var(--foreground))",
         inputBackground: "hsl(var(--input-background))",
         disabled: "hsl(var(--disabled))",
+        error: "hsl(var(--error))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -54,6 +58,7 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          form: "hsl(var(--form-card))",
         },
         button: {
           DEFAULT: "hsl(var(--primary))",
@@ -81,6 +86,9 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'header-pattern': "url('/header-bg.svg')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

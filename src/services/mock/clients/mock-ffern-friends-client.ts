@@ -1,7 +1,8 @@
 import { AxiosInstance, AxiosResponse } from "axios"
+import { GetFfernFriendResponse } from "@/services/types/get-ffern-friend-response-type";
 import { mockGetFfernFriendResponse } from "@/services/mock/data/mockGetFfernFriendResponse";
-import { GetFfernFriendResponse, UpdateFfernFriendsErrorResponse, UpdateFfernFriendsRequest, UpdateFfernFriendsSuccessResponse } from "@/services/response-types";
 import { mockUpdateFfernFriendsErrorResponse, mockUpdateFfernFriendsSuccessResponse } from "@/services/mock/data/mockUpdateFfernFriendsResponse";
+import { UpdateFfernFriendsErrorResponse, UpdateFfernFriendsRequest, UpdateFfernFriendsSuccessResponse } from "@/services/types/update-ffern-friends-request-type";
 
 export default class MockFfernFriendsClient {
 

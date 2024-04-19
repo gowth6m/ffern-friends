@@ -1,13 +1,15 @@
 import "@/styles/globals.css";
 import { Metadata } from "next/types";
-import AppConfig from "@/configs/app-config";
-import NavWrapper from "@/components/navigation/nav-wrapper";
-import Footer from "@/components/footer/footer";
 import Providers from "@/context/providers";
+import AppConfig from "@/configs/app-config";
+import PageWrapper from "@/components/page/page-wrapper";
 
 export const metadata: Metadata = {
   title: AppConfig.metadata.title,
   description: AppConfig.metadata.description,
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -20,10 +22,7 @@ export default function RootLayout({
       <head />
       <body>
         <Providers>
-          <NavWrapper>
-            {children}
-            <Footer />
-          </NavWrapper>
+          <PageWrapper>{children}</PageWrapper>
         </Providers>
       </body>
     </html>

@@ -3,6 +3,8 @@ import Footer from "./footer";
 import Toaster from "../ui/toaster";
 import NavigationBar from "./navigation-bar";
 
+// ------------------------------------------------------------
+
 const PageWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>

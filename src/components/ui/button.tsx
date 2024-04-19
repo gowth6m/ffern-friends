@@ -2,6 +2,8 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
+// ------------------------------------------------------------
+
 import { cn } from "@/lib/utils";
 import Icon from "./icon";
 
@@ -78,6 +80,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           buttonVariants({ variant, size, className }),
           fullWidth && "w-full",
+          {
+            "focus-visible:outline-none": true,
+            [`focus-visible:outline focus-visible:outline-[2px] focus-visible:outline-offset-[4px] focus-visible:outline-primary`]:
+              true,
+          },
         )}
         onClick={(e) => {
           if (loading) return;

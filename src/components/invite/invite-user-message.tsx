@@ -1,5 +1,7 @@
 import React from "react";
 
+// ------------------------------------------------------------
+
 interface Props extends React.ComponentPropsWithoutRef<"div"> {
   name: string | undefined;
 }
@@ -16,7 +18,7 @@ const InviteUserMessage: React.FC<Props> = ({ name }) => {
 
       <p className="mt-4">{`Here’s how it works:`}</p>
 
-      <ul className="ml-8 mt-4 flex list-disc flex-col gap-4">
+      <ul className="ml-4 mt-4 flex list-disc flex-col gap-4">
         <li>
           {`You’ll skip the waiting list and be added straight to the Ffern ledger`}
         </li>

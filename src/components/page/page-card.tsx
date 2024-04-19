@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
 
+// ------------------------------------------------------------
+
 interface Props extends React.PropsWithChildren {
   className?: string;
 }
@@ -31,7 +33,7 @@ const PageCard: React.FC<Props> = ({ children, ...props }) => {
         },
       }}
       className={cn(
-        `relative z-10 mx-auto mt-4 w-[90%] max-w-screen-md rounded bg-card p-4 drop-shadow-lg`,
+        `relative z-20 mx-auto mt-4 w-[90%] max-w-screen-md rounded bg-card p-4 drop-shadow-lg`,
         props.className,
       )}
       {...props}

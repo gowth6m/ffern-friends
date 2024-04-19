@@ -4,6 +4,8 @@ import { mockGetFfernFriendResponse } from "@/services/mock/data/mockGetFfernFri
 import { mockUpdateFfernFriendsErrorResponse, mockUpdateFfernFriendsSuccessResponse } from "@/services/mock/data/mockUpdateFfernFriendsResponse";
 import { UpdateFfernFriendsErrorResponse, UpdateFfernFriendsRequest, UpdateFfernFriendsSuccessResponse } from "@/services/types/update-ffern-friends-request-type";
 
+// ------------------------------------------------------------
+
 export default class MockFfernFriendsClient {
 
     private client: AxiosInstance;

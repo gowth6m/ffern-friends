@@ -1,14 +1,14 @@
 import { z } from "zod";
 
 export const UpdateFfernFriendsRequestSchema = z.object({
-    firstName: z.string(),
-    lastName: z.string(),
-    addressLineOne: z.string(),
+    firstName: z.string().min(1, "First name is required"),
+    lastName: z.string().min(1, "Last name is required"),
+    addressLineOne: z.string().min(1, "Address line 1 is required"),
     addressLineTwo: z.string().optional(),
-    city: z.string(),
-    postcode: z.string(),
-    stateOrCounty: z.string(),
-    country: z.enum(["US", "NL", "GB"]),
+    city: z.string().min(1, "City is required"),
+    postcode: z.string().min(1, "Postcode is required"),
+    stateOrCounty: z.string().min(1, "State/County is required"),
+    country: z.string().min(1, "Country is required"),
 });
 
 export const UpdateFfernFriendsSuccessResponseSchema = z.object({

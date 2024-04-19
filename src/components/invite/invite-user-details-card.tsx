@@ -22,6 +22,8 @@ import {
   SelectValue,
 } from "../ui/select";
 
+// ------------------------------------------------------------
+
 interface Props extends React.ComponentProps<"div"> {
   userData: GetFfernFriendResponse;
 }
@@ -96,56 +98,81 @@ const InviteUserDetailsCard: React.FC<Props> = ({ userData, ...props }) => {
       >
         <div className="flex flex-row gap-4">
           <Input
+            name={"firstName"}
             label="First Name"
             value={formik.values.firstName}
             fullWidth
             onChange={(e) => formik.setFieldValue("firstName", e.target.value)}
+            onBlur={() => formik.setFieldTouched("firstName")}
+            error={formik.touched.firstName && formik.errors.firstName}
+            helperText={formik.touched.firstName && formik.errors.firstName}
           />
           <Input
+            name={"lastName"}
             label="Last Name"
             value={formik.values.lastName}
             fullWidth
             onChange={(e) => formik.setFieldValue("lastName", e.target.value)}
-            className="flex-1"
+            onBlur={() => formik.setFieldTouched("lastName")}
+            error={formik.touched.lastName && formik.errors.lastName}
+            helperText={formik.touched.lastName && formik.errors.lastName}
           />
         </div>
         <Input
+          name={"addressLineOne"}
           label="Address line 1"
           value={formik.values.addressLineOne}
           fullWidth
           onChange={(e) =>
             formik.setFieldValue("addressLineOne", e.target.value)
           }
+          onBlur={() => formik.setFieldTouched("addressLineOne")}
+          error={formik.touched.addressLineOne && formik.errors.addressLineOne}
+          helperText={
+            formik.touched.addressLineOne && formik.errors.addressLineOne
+          }
         />
         <Input
+          name={"addressLineTwo"}
           label="Address line 2 (optional)"
           value={formik.values.addressLineTwo}
           fullWidth
           onChange={(e) =>
             formik.setFieldValue("addressLineTwo", e.target.value)
           }
+          onBlur={() => formik.setFieldTouched("addressLineTwo")}
+          error={formik.touched.addressLineTwo && formik.errors.addressLineTwo}
         />
         <div className="flex flex-row gap-4">
           <Input
+            name={"city"}
             label="City"
             value={formik.values.city}
             fullWidth
             onChange={(e) => formik.setFieldValue("city", e.target.value)}
+            onBlur={() => formik.setFieldTouched("city")}
+            error={formik.touched.city && formik.errors.city}
           />
           <Input
+            name={"postcode"}
             label="Postcode"
             value={formik.values.postcode}
             fullWidth
             onChange={(e) => formik.setFieldValue("postcode", e.target.value)}
+            onBlur={() => formik.setFieldTouched("postcode")}
+            error={formik.touched.postcode && formik.errors.postcode}
           />
         </div>
         <Input
+          name={"stateOrCounty"}
           label="State/County"
           value={formik.values.stateOrCounty}
           fullWidth
           onChange={(e) =>
             formik.setFieldValue("stateOrCounty", e.target.value)
           }
+          onBlur={() => formik.setFieldTouched("stateOrCounty")}
+          error={formik.touched.stateOrCounty && formik.errors.stateOrCounty}
         />
         <Select
           value={formik.values.country}

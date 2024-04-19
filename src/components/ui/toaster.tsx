@@ -1,6 +1,8 @@
 import React from "react";
 import { Toaster as DefaultToaster, ToasterProps } from "react-hot-toast";
 
+// ------------------------------------------------------------
+
 interface Props extends ToasterProps {}
 
 const Toaster: React.FC<Props> = ({ ...props }) => {
